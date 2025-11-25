@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Neo Laptops</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/product.css">
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"> <i class="bi bi-laptop"></i> Neo Laptops </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="product.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <form class="d-flex me-3" role="search">
+              <input
+                class="form-control form-control-dark me-2"
+                type="search"
+                placeholder="Search..."
+                aria-label="Search" />
+            </form>
+
+            <div id="nav-auth-container" class="d-flex align-items-center gap-3">
+              <a href="login.html" class="btn btn-outline-primary-enhanced me-3" id="nav-login-btn"
+                >Login</a
+              >
+              <div class="dropdown" id="nav-user-dropdown" style="display: none">
+                <a
+                  href="#"
+                  class="btn btn-outline-primary-enhanced dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="nav-user-name">
+                  Welcome
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">My Account</a></li>
+                  <li><a class="dropdown-item" href="#">Order History</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#" id="nav-logout-btn">Logout</a>
+                  </li>
+                </ul>
+              </div>
+
+              <a href="login.html" class="text-decoration-none" id="nav-user-icon" title="Login"
+                ><i class="bi bi-person-circle"></i
+              ></a>
+              <a
+                href="cart.html"
+                class="text-decoration-none position-relative"
+                id="nav-cart-icon"
+                title="Cart">
+                <i class="bi bi-cart3"></i>
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  id="cart-item-count"
+                  style="font-size: 0.6em; display: none">
+                  0
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header container fade-in-section">
+        <h1 class="display-4 fw-bold">All Products</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Products</li>
+          </ol>
+        </nav>
+      </section>
+
+      <section class="container my-5">
+        <div class="row g-4">
+          <div class="col-lg-3 fade-in-section">
+            <aside class="filters-sidebar">
+              <div class="filter-group">
+                <h5>Filter by Brand</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input brand-filter"
+                    type="checkbox"
+                    value="ASUS"
+                    id="checkAsus" />
+                  <label class="form-check-label" for="checkAsus">ASUS ROG</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input brand-filter"
+                    type="checkbox"
+                    value="Alienware"
+                    id="checkAlienware" />
+                  <label class="form-check-label" for="checkAlienware">Alienware</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input brand-filter"
+                    type="checkbox"
+                    value="MSI"
+                    id="checkMSI" />
+                  <label class="form-check-label" for="checkMSI">MSI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input brand-filter"
+                    type="checkbox"
+                    value="Lenovo"
+                    id="checkLenovo" />
+                  <label class="form-check-label" for="checkLenovo">Lenovo Legion</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input brand-filter"
+                    type="checkbox"
+                    value="SpectraByte"
+                    id="checkSpectraByte" />
+                  <label class="form-check-label" for="checkSpectraByte">SpectraByte</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input brand-filter"
+                    type="checkbox"
+                    value="AeroNote"
+                    id="checkAeroNote" />
+                  <label class="form-check-label" for="checkAeroNote">AeroNote</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input brand-filter"
+                    type="checkbox"
+                    value="StudentBook"
+                    id="checkStudentBook" />
+                  <label class="form-check-label" for="checkStudentBook">StudentBook</label>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <h5>RAM</h5>
+                <div class="filter-tags d-flex flex-wrap gap-2" data-filter-type="ram">
+                  <span class="badge" data-value="8">8 GB</span>
+                  <span class="badge" data-value="16">16 GB</span>
+                  <span class="badge" data-value="18">18 GB</span>
+                  <span class="badge" data-value="32">32 GB</span>
+                  <span class="badge" data-value="36">36 GB</span>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <h5>GPU</h5>
+                <div class="filter-tags d-flex flex-wrap gap-2" data-filter-type="gpu">
+                  <span class="badge" data-value="RTX 4060">RTX 4060</span>
+                  <span class="badge" data-value="RTX 4070">RTX 4070</span>
+                  <span class="badge" data-value="M3 Pro">M3 Pro</span>
+                  <span class="badge" data-value="M3 Max">M3 Max</span>
+                  <span class="badge" data-value="Intel Iris Xe">Intel Iris Xe</span>
+                  <span class="badge" data-value="Intel Arc">Intel Arc</span>
+                  <span class="badge" data-value="AMD Radeon">AMD Radeon</span>
+                  <span class="badge" data-value="Intel UHD">Intel UHD</span>
+                </div>
+              </div>
+
+              <button class="btn btn-outline-light-enhanced w-100" id="clear-filters-btn">
+                Clear Filters
+              </button>
+            </aside>
+          </div>
+
+          <div class="col-lg-9">
+            <main class="product-grid-main">
+              <section class="mb-5 fade-in-section">
+                <h2>Gaming Laptops</h2>
+                <div class="row g-4">
+                  <div
+                    class="col-12 col-md-6 col-xl-4"
+                    data-brand="ASUS"
+                    data-ram="32"
+                    data-gpu="RTX 4070">
+                    <div class="product-card-v2">
+                      <div class="product-image-container">
+                        <img
+                          src="images/ASUS ROG Zephyrus G14.jpg"
+                          alt="ASUS ROG Zephyrus G14"
+                          class="product-quick-view-image" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title product-quick-view-title">ASUS ROG Zephyrus G14</h5>
+                        <ul class="product-specs product-quick-view-specs">
+                          <li>CPU: Ryzen 9 7940HS</li>
+                          <li>RAM: 32GB DDR5</li>
+                          <li>GPU: RTX 4070 8GB</li>
+                        </ul>
+                        <div class="product-rating mb-2">
+                          ★★★★☆ <span class="text-white-50">(34)</span>
+                        </div>
+                        <div class="product-price product-quick-view-price">
+                          <span class="current-price">₹1,74,990</span>
+                          <span class="old-price">₹2,09,990</span>
+                        </div>
+                      </div>
+                      <div class="card-footer d-flex gap-2 product-buttons">
+                        <a href="#" class="btn btn-secondary-solid-glow flex-grow-1 add-to-cart-btn"
+                          ><i class="bi bi-cart-plus"></i> Add to Cart</a
+                        >
+                        <a
+                          href="#"
+                          class="btn btn-outline-light-enhanced flex-grow-1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#quickViewModal"
+                          >Quick View</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-md-6 col-xl-4"
+                    data-brand="Lenovo"
+                    data-ram="32"
+                    data-gpu="RTX 4070">
+                    <div class="product-card-v2">
+                      <div class="product-image-container">
+                        <img
+                          src="images/Lenovo Legion Pro 5i.webp"
+                          alt="Lenovo Legion Pro"
+                          class="product-quick-view-image" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title product-quick-view-title">Lenovo Legion Pro 5i</h5>
+                        <ul class="product-specs product-quick-view-specs">
+                          <li>CPU: Intel Core i9-13900HX</li>
+                          <li>RAM: 32GB DDR5</li>
+                          <li>GPU: RTX 4070 8GB</li>
+                        </ul>
+                        <div class="product-rating mb-2">
+                          ★★★★★ <span class="text-white-50">(28)</span>
+                        </div>
+                        <div class="product-price product-quick-view-price">
+                          <span class="current-price">₹1,89,990</span>
+                          <span class="old-price">₹2,15,990</span>
+                        </div>
+                      </div>
+                      <div class="card-footer d-flex gap-2 product-buttons">
+                        <a href="#" class="btn btn-secondary-solid-glow flex-grow-1 add-to-cart-btn"
+                          ><i class="bi bi-cart-plus"></i> Add to Cart</a
+                        >
+                        <a
+                          href="#"
+                          class="btn btn-outline-light-enhanced flex-grow-1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#quickViewModal"
+                          >Quick View</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-md-6 col-xl-4"
+                    data-brand="MSI"
+                    data-ram="16"
+                    data-gpu="RTX 4060">
+                    <div class="product-card-v2">
+                      <div class="product-image-container">
+                        <img
+                          src="images/MSI Katana 15.jpg"
+                          alt="MSI Katana 15"
+                          class="product-quick-view-image" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title product-quick-view-title">MSI Katana 15</h5>
+                        <ul class="product-specs product-quick-view-specs">
+                          <li>CPU: Intel Core i7-13620H</li>
+                          <li>RAM: 16GB DDR5</li>
+                          <li>GPU: RTX 4060 8GB</li>
+                        </ul>
+                        <div class="product-rating mb-2">
+                          ★★★★☆ <span class="text-white-50">(45)</span>
+                        </div>
+                        <div class="product-price product-quick-view-price">
+                          <span class="current-price">₹1,09,990</span>
+                        </div>
+                      </div>
+                      <div class="card-footer d-flex gap-2 product-buttons">
+                        <a href="#" class="btn btn-secondary-solid-glow flex-grow-1 add-to-cart-btn"
+                          ><i class="bi bi-cart-plus"></i> Add to Cart</a
+                        >
+                        <a
+                          href="#"
+                          class="btn btn-outline-light-enhanced flex-grow-1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#quickViewModal"
+                          >Quick View</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="mb-5 fade-in-section">
+                <h2>Office & Business Laptops</h2>
+                <div class="row g-4">
+                  <div
+                    class="col-12 col-md-6 col-xl-4"
+                    data-brand="SpectraByte"
+                    data-ram="18"
+                    data-gpu="M3 Pro">
+                    <div class="product-card-v2">
+                      <div class="product-image-container">
+                        <img
+                          src="images/SpectraByte Pro 14.jpg"
+                          alt="SpectraByte Pro"
+                          class="product-quick-view-image" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title product-quick-view-title">SpectraByte Pro 14</h5>
+                        <ul class="product-specs product-quick-view-specs">
+                          <li>CPU: M3 Pro 12-core</li>
+                          <li>RAM: 18GB Unified</li>
+                          <li>GPU: 18-core GPU</li>
+                        </ul>
+                        <div class="product-rating mb-2">
+                          ★★★★★ <span class="text-white-50">(55)</span>
+                        </div>
+                        <div class="product-price product-quick-view-price">
+                          <span class="current-price">₹1,99,900</span>
+                        </div>
+                      </div>
+                      <div class="card-footer d-flex gap-2 product-buttons">
+                        <a href="#" class="btn btn-secondary-solid-glow flex-grow-1 add-to-cart-btn"
+                          ><i class="bi bi-cart-plus"></i> Add to Cart</a
+                        >
+                        <a
+                          href="#"
+                          class="btn btn-outline-light-enhanced flex-grow-1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#quickViewModal"
+                          >Quick View</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-md-6 col-xl-4"
+                    data-brand="AeroNote"
+                    data-ram="16"
+                    data-gpu="Intel Iris Xe">
+                    <div class="product-card-v2">
+                      <div class="product-image-container">
+                        <img
+                          src="images/AeroNote Air 15.png"
+                          alt="AeroNote Air"
+                          class="product-quick-view-image" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title product-quick-view-title">AeroNote Air 15</h5>
+                        <ul class="product-specs product-quick-view-specs">
+                          <li>CPU: Intel Core i7 Evo</li>
+                          <li>RAM: 16GB LPDDR5</li>
+                          <li>GPU: Intel Iris Xe</li>
+                        </ul>
+                        <div class="product-rating mb-2">
+                          ★★★★☆ <span class="text-white-50">(81)</span>
+                        </div>
+                        <div class="product-price product-quick-view-price">
+                          <span class="current-price">₹94,990</span>
+                        </div>
+                      </div>
+                      <div class="card-footer d-flex gap-2 product-buttons">
+                        <a href="#" class="btn btn-secondary-solid-glow flex-grow-1 add-to-cart-btn"
+                          ><i class="bi bi-cart-plus"></i> Add to Cart</a
+                        >
+                        <a
+                          href="#"
+                          class="btn btn-outline-light-enhanced flex-grow-1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#quickViewModal"
+                          >Quick View</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-md-6 col-xl-4"
+                    data-brand="SpectraByte"
+                    data-ram="36"
+                    data-gpu="M3 Max">
+                    <div class="product-card-v2">
+                      <div class="product-image-container">
+                        <img
+                          src="images/SpectraByte Pro 16.avif"
+                          alt="SpectraByte Pro 16"
+                          class="product-quick-view-image" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title product-quick-view-title">SpectraByte Pro 16</h5>
+                        <ul class="product-specs product-quick-view-specs">
+                          <li>CPU: M3 Max 14-core</li>
+                          <li>RAM: 36GB Unified</li>
+                          <li>GPU: 30-core GPU</li>
+                        </ul>
+                        <div class="product-rating mb-2">
+                          ★★★★★ <span class="text-white-50">(42)</span>
+                        </div>
+                        <div class="product-price product-quick-view-price">
+                          <span class="current-price">₹2,89,900</span>
+                        </div>
+                      </div>
+                      <div class="card-footer d-flex gap-2 product-buttons">
+                        <a href="#" class="btn btn-secondary-solid-glow flex-grow-1 add-to-cart-btn"
+                          ><i class="bi bi-cart-plus"></i> Add to Cart</a
+                        >
+                        <a
+                          href="#"
+                          class="btn btn-outline-light-enhanced flex-grow-1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#quickViewModal"
+                          >Quick View</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-md-6 col-xl-4"
+                    data-brand="AeroNote"
+                    data-ram="32"
+                    data-gpu="Intel Arc">
+                    <div class="product-card-v2">
+                      <div class="product-image-container">
+                        <img
+                          src="images/AeroNote Pro 14.webp"
+                          alt="AeroNote Pro"
+                          class="product-quick-view-image" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title product-quick-view-title">AeroNote Pro 14</h5>
+                        <ul class="product-specs product-quick-view-specs">
+                          <li>CPU: Intel Core Ultra 7</li>
+                          <li>RAM: 32GB LPDDR5X</li>
+                          <li>GPU: Intel Arc</li>
+                        </ul>
+                        <div class="product-rating mb-2">
+                          ★★★★☆ <span class="text-white-50">(66)</span>
+                        </div>
+                        <div class="product-price product-quick-view-price">
+                          <span class="current-price">₹1,24,990</span>
+                        </div>
+                      </div>
+                      <div class="card-footer d-flex gap-2 product-buttons">
+                        <a href="#" class="btn btn-secondary-solid-glow flex-grow-1 add-to-cart-btn"
+                          ><i class="bi bi-cart-plus"></i> Add to Cart</a
+                        >
+                        <a
+                          href="#"
+                          class="btn btn-outline-light-enhanced flex-grow-1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#quickViewModal"
+                          >Quick View</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="mb-5 fade-in-section">
+                <h2>Student Laptops</h2>
+                <div class="row g-4">
+                  <div
+                    class="col-12 col-md-6 col-xl-4"
+                    data-brand="StudentBook"
+                    data-ram="16"
+                    data-gpu="Intel Iris Xe">
+                    <div class="product-card-v2">
+                      <div class="product-image-container">
+                        <img
+                          src="images/Student Book 14.avif"
+                          alt="Student Book 14"
+                          class="product-quick-view-image" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title product-quick-view-title">Student Book 14</h5>
+                        <ul class="product-specs product-quick-view-specs">
+                          <li>CPU: Intel Core i5-1335U</li>
+                          <li>RAM: 16GB LPDDR4X</li>
+                          <li>GPU: Intel Iris Xe</li>
+                        </ul>
+                        <div class="product-rating mb-2">
+                          ★★★★☆ <span class="text-white-50">(102)</span>
+                        </div>
+                        <div class="product-price product-quick-view-price">
+                          <span class="current-price">₹62,990</span>
+                          <span class="old-price">₹75,990</span>
+                        </div>
+                      </div>
+                      <div class="card-footer d-flex gap-2 product-buttons">
+                        <a href="#" class="btn btn-secondary-solid-glow flex-grow-1 add-to-cart-btn"
+                          ><i class="bi bi-cart-plus"></i> Add to Cart</a
+                        >
+                        <a
+                          href="#"
+                          class="btn btn-outline-light-enhanced flex-grow-1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#quickViewModal"
+                          >Quick View</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-md-6 col-xl-4"
+                    data-brand="StudentBook"
+                    data-ram="16"
+                    data-gpu="AMD Radeon">
+                    <div class="product-card-v2">
+                      <div class="product-image-container">
+                        <img
+                          src="images/Student Book Pro 15.jpeg"
+                          alt="Student Book Pro"
+                          class="product-quick-view-image" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title product-quick-view-title">Student Book Pro 15</h5>
+                        <ul class="product-specs product-quick-view-specs">
+                          <li>CPU: Ryzen 5 7530U</li>
+                          <li>RAM: 16GB DDR4</li>
+                          <li>GPU: AMD Radeon</li>
+                        </ul>
+                        <div class="product-rating mb-2">
+                          ★★★★☆ <span class="text-white-50">(91)</span>
+                        </div>
+                        <div class="product-price product-quick-view-price">
+                          <span class="current-price">₹58,990</span>
+                        </div>
+                      </div>
+                      <div class="card-footer d-flex gap-2 product-buttons">
+                        <a href="#" class="btn btn-secondary-solid-glow flex-grow-1 add-to-cart-btn"
+                          ><i class="bi bi-cart-plus"></i> Add to Cart</a
+                        >
+                        <a
+                          href="#"
+                          class="btn btn-outline-light-enhanced flex-grow-1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#quickViewModal"
+                          >Quick View</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-md-6 col-xl-4"
+                    data-brand="AeroNote"
+                    data-ram="8"
+                    data-gpu="Intel UHD">
+                    <div class="product-card-v2">
+                      <div class="product-image-container">
+                        <img
+                          src="images/AeroNote Lite 14.jpg"
+                          alt="AeroNote Lite"
+                          class="product-quick-view-image" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title product-quick-view-title">AeroNote Lite 14</h5>
+                        <ul class="product-specs product-quick-view-specs">
+                          <li>CPU: Intel Core i3-N305</li>
+                          <li>RAM: 8GB LPDDR5</li>
+                          <li>GPU: Intel UHD</li>
+                        </ul>
+                        <div class="product-rating mb-2">
+                          ★★★☆☆ <span class="text-white-50">(74)</span>
+                        </div>
+                        <div class="product-price product-quick-view-price">
+                          <span class="current-price">₹39,990</span>
+                        </div>
+                      </div>
+                      <div class="card-footer d-flex gap-2 product-buttons">
+                        <a href="#" class="btn btn-secondary-solid-glow flex-grow-1 add-to-cart-btn"
+                          ><i class="bi bi-cart-plus"></i> Add to Cart</a
+                        >
+                        <a
+                          href="#"
+                          class="btn btn-outline-light-enhanced flex-grow-1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#quickViewModal"
+                          >Quick View</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <div id="no-products-message" class="text-center py-5" style="display: none">
+                <i class="bi bi-search-heart" style="font-size: 4rem"></i>
+                <h3 class="mt-3">No Laptops Found</h3>
+                <p>Try adjusting your filters, as no products match your current selection.</p>
+              </div>
+            </main>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer py-5 mt-5 fade-in-section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-logo mb-3"><i class="bi bi-laptop"></i> Neo Laptops</h5>
+            <p class="small">
+              Powering your digital future with curated tech and expert support. Join the
+              revolution.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-3">Quick Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li class="mb-2"><a href="index.html">Home</a></li>
+              <li class="mb-2"><a href="products.html">Products</a></li>
+              <li class="mb-2"><a href="about.html">About Us</a></li>
+              <li class="mb-2"><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-3">Support</h5>
+            <ul class="list-unstyled footer-links">
+              <li class="mb-2"><a href="#">FAQ</a></li>
+              <li class="mb-2"><a href="#">Shipping</a></li>
+              <li class="mb-2"><a href="#">Returns</a></li>
+              <li class="mb-2"><a href="#">Warranty</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-3">Laptops</h5>
+            <ul class="list-unstyled footer-links">
+              <li class="mb-2"><a href="products.html">Gaming</a></li>
+              <li class="mb-2"><a href="products.html">Business</a></li>
+              <li class="mb-2"><a href="products.html">Student</a></li>
+              <li class="mb-2"><a href="#">Accessories</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-12">
+            <h5 class="text-white mb-3">Follow Us & Subscribe</h5>
+            <div class="footer-socials d-flex gap-3 mb-3">
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+            <form class="d-flex">
+              <input
+                type="email"
+                class="form-control form-control-dark"
+                placeholder="Email address..." />
+              <button class="btn btn-outline-primary-enhanced ms-2" type="submit">Go</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="footer-bottom py-3">
+      <div class="container text-center">
+        <p class="mb-0 small">
+          &copy; 2025 Neo Laptops. All Rights Reserved. |
+          <a href="#" class="text-primary">Privacy Policy</a> |
+          <a href="#" class="text-primary">Terms of Use</a>
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="quickViewModal"
+      tabindex="-1"
+      aria-labelledby="quickViewModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="quickViewModalLabel">Product Quick View</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-4">
+              <div class="col-lg-6">
+                <img
+                  src="httpsThis is a placeholder image"
+                  alt="Product Image"
+                  class="img-fluid rounded"
+                  id="modal-image" />
+              </div>
+              <div class="col-lg-6">
+                <h2 class="h4 text-white" id="modal-title">Laptop Title</h2>
+                <div id="modal-price" class="product-price mb-3">
+                  <span class="current-price">₹1,00,000</span>
+                  <span class="old-price">₹1,10,000</span>
+                </div>
+                <h5 class="text-white fs-6">Specifications:</h5>
+                <div id="modal-specs" class="product-specs">
+                  <ul>
+                    <li>CPU: Intel Core i5</li>
+                    <li>RAM: 16GB</li>
+                  </ul>
+                </div>
+                <a href="#" class="btn btn-secondary-solid-glow w-100 mt-3 add-to-cart-btn"
+                  ><i class="bi bi-cart-plus"></i> Add to Cart</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="add-to-cart-toast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true">
+        <div class="toast-header bg-primary text-dark">
+          <i class="bi bi-check-circle-fill me-2"></i>
+          <strong class="me-auto">Success</strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="toast-body-message">Item added to your cart.</div>
+      </div>
+
+      <div id="app-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header" id="toast-header">
+          <i class="bi bi-check-circle-fill me-2"></i>
+          <strong class="me-auto toast-title" id="toast-title">Success</strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="toast-body"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+    <script src="js/product.js"></script>
+
+  </body>
+</html>
